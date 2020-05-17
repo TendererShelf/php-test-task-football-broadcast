@@ -145,4 +145,35 @@
             </table>
         </div>
     </div>
+    <div class="card mb-3">
+        <div class="card-header text-center">
+            <div>
+                <strong>Общее время для каждой позиции</strong>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <table class="table table">
+                <thead>
+                <tr>
+                    <th>Позиция</th>
+                    <th>Время</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for position, time in team.totalPositionsTime %}
+                    <tr>
+                        <td>
+                            {{ position }}
+                        </td>
+                        <td>
+                            {{ time }}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 {% endmacro %}
