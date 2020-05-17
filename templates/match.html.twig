@@ -120,6 +120,13 @@
                             {{ player.number }}
                         </td>
                         <td>
+                            {% if player.hasRedCard %}
+                                <img src="https://www.soccer.ru/sites/all/themes/newtheme/images/events-icons/yellow_red.png">
+                            {% elseif player.hasYellowCard %}
+                                <img src="https://www.soccer.ru/sites/all/themes/newtheme/images/events-icons/card.png">
+                            {% endif %}
+                        </td>
+                        <td>
                             {{ player.name }}
                         </td>
                         <td>
